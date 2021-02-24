@@ -1,0 +1,109 @@
+CmPCConfig.dll version history.
+
+
+Format:
+____________________________________________________________________________________________________
+Rev Label : 0.00		
+Date Completed (Checked In) : 07/10/2003
+Changes by : William Levine
+Dependency Requirements : 
+	XXXX.dll	> Rev 0.00
+Notes :
+
+Changes :
+- change 1
+- change 2
+- change 3
+- etc...
+Known Issues:	
+
+____________________________________________________________________________________________________
+Rev Label : 0.001		
+Date Completed (Checked In) : 02/11/2004
+Changes by : William Levine
+Requirments :
+
+Changes :
+- Initial version includes functional implementation of the following:
+	- General functions for getting and setting IP settings, hostname, and computer name.
+	- Abstracts network adaptors using keys that specify the textual name of the adaptor from the registry
+		and looks up the proper CLSID for that adapters settings.
+
+Known Issues:	
+	- network adapter abstraction - once a CLSID is stored it is always used, even if something changes.
+		we should - if we cannot open the proper CLSID, then clear it and try to find the proper one.
+	- only 
+
+____________________________________________________________________________________________________
+Rev Label : 0.02		
+Date Completed (Checked In) : 05/4/2004
+Changes by : William Levine
+Requirments :
+
+Changes :
+	- Basic Fixes to make it functional 
+
+Known Issues:	
+	- network adapter abstraction - once a CLSID is stored it is always used, even if something changes.
+		we should - if we cannot open the proper CLSID, then clear it and try to find the proper one.
+
+____________________________________________________________________________________________________
+Rev Label : 0.05
+Date Completed (Checked In) : 5/13/04
+Changes by : William Levine
+Requirments :
+
+Changes :
+	Fixed Set ComputerName functions
+	Added functions for getting paths from the system
+	Added functions for configuring the DUA in the boot image and which image boots
+	Added config functions for workgroup
+
+Known Issues:	
+
+________________________________________________________________________________________
+Rev Label : 0.06
+Date Completed (Checked In) : 5/25/04
+Changes by : John Pavlik
+Requirements :
+	Synch with .04 CMSetup.exe
+
+Changes :
+	Made various functions take buffers instead of allocating memory
+	(mismatch between allocators was causing problems)
+
+Known Issues:	
+	Read Only/Read Write options for shares do NOT work
+
+________________________________________________________________________________________
+Rev Label : 0.07
+Date Completed (Checked In) : 5/28/04
+Changes by : John Pavlik
+Requirements :
+	Synch with .05 CMSetup.exe
+
+Changes :
+	Read Only/Read Write options for shares now work
+
+
+________________________________________________________________________________________
+Rev Label : 0.08
+Date Completed (Checked In) : 6/2/04
+Changes by : John Pavlik
+Requirements :
+
+Changes :
+	Force ActiveComputerName to be set in the registry.  It appears that
+	This is set just before rebooting?  In any case, if we don't do it this
+	way you need to commit the entire d drive instead of just parts of it.
+
+________________________________________________________________________________________
+Rev Label : 0.09
+Date Completed (Checked In) : 6/16/04
+Changes by : William Levine	
+Requirements :
+
+Changes :
+	Added /scriptdebug to command line for regcommit function.  This was needed to get the computername to save properly.
+		Also may be useful in the future.
+
