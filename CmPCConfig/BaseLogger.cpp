@@ -77,6 +77,7 @@ BaseLogger::~BaseLogger()
 		WriteLog(_T("***************************************************************"));
 		WriteFormattedLog( _T("Service Logger created with TraceFlag %d (0x%X)"), m_iTraceFlag, m_iTraceFlag );
 		WriteLog(_T("***************************************************************"));
+		WriteLog(_T("***************************************************************"));
 
 	}
 	catch(...)
